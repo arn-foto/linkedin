@@ -4,9 +4,12 @@ import "./Sidebar.css";
 
 function Sidebar() {
   return (
-    <div className="Sidebar">
+    <div className="sidebar">
       <div className="sidebar__top">
-        <img src="" alt="" />
+        <img
+          src="https://images.unsplash.com/photo-1609232782648-a824eed4be79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80"
+          alt=""
+        />
         <Avatar className="sidebar__avatar" />
         <h2>Anthony Navarro</h2>
         <h4>anthony@gmail.com</h4>
