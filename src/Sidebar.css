@@ -31,3 +31,9 @@
   border-top-right-radius: 10px;
   object-fit: cover;
 }
+
+.sidebar__stat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
