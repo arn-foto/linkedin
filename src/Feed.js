@@ -29,6 +29,8 @@ function Feed() {
           />
         </div>
       </div>
+
+      {/* posts */}
     </div>
   );
 }
