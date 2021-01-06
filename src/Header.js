@@ -31,7 +31,7 @@ function Header() {
         <HeaderOption Icon={NotificationsIcon} title="Notifications" />
         <HeaderOption
           avatar="https://avatars3.githubusercontent.com/u/38259824?s=460&u=f051f7be5c3b35fee8f8d2fdcd667a44da2e51d7&v=4"
-          title="Anthony"
+          title="me me me"
         />
       </div>
     </div>
