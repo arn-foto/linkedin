@@ -37,4 +37,23 @@
 }
 
 .feed__inputOptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputOption {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+  color: gray;
+}
+.inputOption:hover {
+  background-color: whitewhite;
+  border-radius: 10px;
+  color: black;
+}
+
+.inputOption > h4 {
+  margin-left: 5px;
 }
