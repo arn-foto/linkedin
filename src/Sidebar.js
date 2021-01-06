@@ -11,19 +11,21 @@ function Sidebar() {
           alt=""
         />
         <Avatar className="sidebar__avatar" />
-        <h2>Anthony Navarro</h2>
+        <h2>Anthony</h2>
         <h4>anthony@gmail.com</h4>
       </div>
+
       <div className="sidebar__stats">
         <div className="sidebar__stat">
           <p>Who viewed you</p>
           <p className="sidebar__statNumber">616</p>
         </div>
+        <div className="sidebar__stat">
+          <p>Views on post</p>
+          <p className="sidebar__statNumber">1987</p>
+        </div>
       </div>
-      <div className="sidebar__stat">
-        <p>Views on post</p>
-        <p className="sidebar__statNumber">1987</p>
-      </div>
+
       <div className="sidebar__bottom">
         <p>Recent</p>
       </div>
