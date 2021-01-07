@@ -12,6 +12,7 @@ function Feed() {
   // Setting state for posting
   const [posts, setPosts] = useState([]);
 
+  useEffect(() => {}, []);
   const sendPost = (e) => {
     e.preventDefault();
   };
