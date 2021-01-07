@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "../src/Header";
 import Sidebar from "../src/Sidebar";
 import Feed from "../src/Feed";
+import Widgets from "../src/Widgets";
 import { selectUser, login, logout } from "./features/userSlice";
 import Login from "./Login";
 import { useDispatch, useSelector } from "react-redux";
@@ -40,7 +41,7 @@ function App() {
         <div className="app__body">
           <Sidebar />
           <Feed />
-          {/* widgets */}
+          <Widgets />
         </div>
       )}
     </div>
