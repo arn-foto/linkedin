@@ -1,14 +1,42 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { login } from "./features/userSlice";
 import { auth } from "./firebase";
 import "./Login.css";
 
 function Login() {
+  // This is state for the login widget
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [profilePic, setProfilePic] = useState("");
+  // redux
+  const dispatch = useDispatch();
 
-  const register = () => {};
+  const register = () => {
+    if (!name) {
+      alert("Please enter a full name!");
+    }
+    // these are keys that refer to firebase
+    auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
+      userAuth.user
+        .updateProfile({
+          displayName: name,
+          photoUrl: profilePic,
+        })
+        .then(() => {
+          dispatch(
+            login({
+              email: userAuth.user.email,
+              uid: userAuth.user.uid,
+              displayName: name,
+              photoUrl: profilePic,
+            })
+          );
+        });
+    });
+  };
+
   const logIntoApp = (e) => {
     e.preventDefault();
   };
