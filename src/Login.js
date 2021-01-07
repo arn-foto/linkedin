@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { auth } from "./firebase";
 import "./Login.css";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [profilePic, setProfilePic] = useState("");
+
   const register = () => {};
-  const logIntoApp = () => {};
+  const logIntoApp = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <div className="login">
@@ -12,16 +20,36 @@ function Login() {
         alt="Logo"
       />
       <form>
-        <input placeholder="Name (required)" type="text" />
-        <input placeholder="Profile pic URL (optional)" type="text" />
-        <input placeholder="Email" type="text" />
-        <input placeholder="Password" type="password" />
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Name (required)"
+          type="text"
+        />
+        <input
+          value={profilePic}
+          onChange={(e) => setProfilePic(e.target.value)}
+          placeholder="Profile pic URL (optional)"
+          type="text"
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+          type="text"
+        />
+        <input
+          value={password}
+          onChane={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          type="password"
+        />
         <button type="submit" onClick={logIntoApp}>
           Sign In
         </button>
       </form>
       <p>
-        Not a member?
+        Not a member?{" "}
         <span className="login__register" onClick={register}>
           Register Now
         </span>
