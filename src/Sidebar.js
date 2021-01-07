@@ -39,7 +39,12 @@ function Sidebar() {
         {recentItem("React")}
         {recentItem("Redux")}
         {recentItem("HTML")}
-        {recentItem("CSS")}
+        {recentItem("RESTFul API")}
+        {recentItem("Java")}
+        {recentItem("SpringBoot")}
+        {recentItem("MySQL")}
+        {recentItem("Git")}
+        {recentItem("Agile")}
       </div>
     </div>
   );

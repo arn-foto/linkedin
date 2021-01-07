@@ -1,12 +1,13 @@
 .feed {
   flex: 0.6;
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 .feed__inputContainer {
   padding-bottom: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
+  padding: 10px;
   background-color: white;
 }
 
