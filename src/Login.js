@@ -18,23 +18,26 @@ function Login() {
       alert("Please enter a full name!");
     }
     // these are keys that refer to firebase
-    auth.createUserWithEmailAndPassword(email, password).then((userAuth) => {
-      userAuth.user
-        .updateProfile({
-          displayName: name,
-          photoUrl: profilePic,
-        })
-        .then(() => {
-          dispatch(
-            login({
-              email: userAuth.user.email,
-              uid: userAuth.user.uid,
-              displayName: name,
-              photoUrl: profilePic,
-            })
-          );
-        });
-    });
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userAuth) => {
+        userAuth.user
+          .updateProfile({
+            displayName: name,
+            photoUrl: profilePic,
+          })
+          .then(() => {
+            dispatch(
+              login({
+                email: userAuth.user.email,
+                uid: userAuth.user.uid,
+                displayName: name,
+                photoUrl: profilePic,
+              })
+            );
+          });
+      })
+      .catch((error) => alert(error));
   };
 
   const logIntoApp = (e) => {
@@ -68,10 +71,11 @@ function Login() {
         />
         <input
           value={password}
-          onChane={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           type="password"
         />
+
         <button type="submit" onClick={logIntoApp}>
           Sign In
         </button>
