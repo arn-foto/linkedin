@@ -3,6 +3,7 @@ import "./Login.css";
 
 function Login() {
   const register = () => {};
+  const logIntoApp = () => {};
 
   return (
     <div className="login">
@@ -15,7 +16,9 @@ function Login() {
         <input placeholder="Profile pic URL (optional)" type="text" />
         <input placeholder="Email" type="text" />
         <input placeholder="Password" type="password" />
-        <button>Sign In</button>
+        <button type="submit" onClick={logIntoApp}>
+          Sign In
+        </button>
       </form>
       <p>
         Not a member?
