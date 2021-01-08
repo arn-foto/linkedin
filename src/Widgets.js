@@ -22,11 +22,17 @@ function Widgets() {
         <h2>Linkedin News</h2>
         <InfoIcon />
       </div>
-      {newsArticle("Shocking news! - Air is now BAD for you!", "totally!")}
-      {newsArticle("Shocking news! - Air is now BAD for you!", "totally!")}
-      {newsArticle("Shocking news! - Air is now BAD for you!", "totally!")}
-      {newsArticle("Shocking news! - Air is now BAD for you!", "totally!")}
-      {newsArticle("Shocking news! - Air is now BAD for you!", "totally!")}
+      {newsArticle("Shocking news! - Air is now BAD for you!", "water too!")}
+      {newsArticle(
+        "More news! - This App was created with React Js",
+        "Redux too!"
+      )}
+      {newsArticle(
+        "Firebase is being used for authentication!",
+        "Learn about how cool it is!"
+      )}
+      {newsArticle("This App was deployed with Firebase!", "totally!")}
+      {newsArticle("Css & materialUI for styling", "HTML")}
     </div>
   );
 }
