@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import CreateIcon from "@material-ui/icons/Create";
 import ImageIcon from "@material-ui/icons/Image";
 import "./Feed.css";
@@ -9,7 +10,6 @@ import CalendarViewDayIcon from "@material-ui/icons/CalendarViewDay";
 import Post from "./Post";
 import { db } from "./firebase";
 import firebase from "firebase";
-import { useSelector } from "react-redux";
 import { selectUser } from "./features/userSlice";
 import FlipMove from "react-flip-move";
 
@@ -40,7 +40,7 @@ function Feed() {
       name: user.displayName,
       description: user.email,
       message: input,
-      photoUrl: user.photoUrl || "",
+      photoUrl: "",
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
 

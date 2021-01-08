@@ -24,7 +24,7 @@ function Login() {
         userAuth.user
           .updateProfile({
             displayName: name,
-            photoUrl: profilePic,
+            photoURL: profilePic,
           })
           .then(() => {
             dispatch(
@@ -51,7 +51,7 @@ function Login() {
             email: userAuth.user.email,
             uid: userAuth.user.uid,
             displayName: userAuth.user.displayName,
-            profileUrl: userAuth.user.profileURL,
+            profileUrl: userAuth.user.photoURL,
           })
         );
       })
@@ -68,7 +68,7 @@ function Login() {
         <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Name (required)"
+          placeholder="Name (required if registering)"
           type="text"
         />
         <input
