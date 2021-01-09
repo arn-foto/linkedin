@@ -15,5 +15,5 @@ Created with:
 - ReactJS
 - Redux for th Apps state management
 - Firebase for user authentication & saving user data
-- Material UI for icons and Css for styling
+- Material UI & Css for styling
 
