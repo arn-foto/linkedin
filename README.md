@@ -4,7 +4,7 @@ https://linkedin-aa465.web.app/
 
 As a user you can:
 
-- Create an account with the option of adding an avatar(photograph).
+- Create an account with the option of adding an avatar(photograph). (you MUST use valid link)
 - Log in & out.
 - Submit & view messages from other users.
 - user data is saved and displayed
